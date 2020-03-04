@@ -24,27 +24,25 @@ const concat = require("concat");
     await fs.copy("./dist/assets/", "elements/assets/");
   await fs.writeFile(
     "./elements/README.md",
-    `
-        Insert the following elements into your page
-      
-        <user-poll></user-poll>
-        <script src="../elements/user-poll.js"></script>
+`Insert the following elements into your page
+
+<user-poll></user-poll>
+<script src="../elements/user-poll.js"></script>
         `
   );
   await fs.writeFile(
     "./elements/index.html",
-    `
-          <!-- This index.html is meant to serve as a test of the custom element -->
-          <!doctype html>
-          <html lang="en">
-          <head>
-          <title>Angular 9 Elements Demo</title>
-          </head>
-          <body>
-          <user-poll></user-poll>
-          <script src="../elements/user-poll.js"></script>
-          </body>
-          </html>
+`<!-- This index.html is meant to serve as a test of the custom element -->
+<!doctype html>
+<html lang="en">
+<head>
+<title>Angular 9 Elements Demo</title>
+</head>
+<body>
+<user-poll></user-poll>
+<script src="../elements/user-poll.js"></script>
+</body>
+</html>
         `
   );
   // await fs.removeSync("dist"); // removes the dist dir
